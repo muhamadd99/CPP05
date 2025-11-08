@@ -6,11 +6,12 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:06:38 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/06 17:08:39 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/08 08:32:25 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <iostream>
 
 Bureaucrat::Bureaucrat() : _name("Unnamed"), _grade(150)
@@ -81,4 +82,18 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& other)
 {
 	os << other.getName() << ", bureaucrat grade " << other.getGrade() << ".";
 	return (os);
+}
+
+void	Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch (const Form::GradeTooLowException& e)
+	{
+		std::cout << _name << " couldn't sign " << form.getName()
+				<< " because " << e.what() << std::endl;
+	}
 }

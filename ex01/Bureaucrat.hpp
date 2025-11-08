@@ -6,13 +6,15 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 09:51:01 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/06 13:49:14 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/08 07:43:35 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string> //std::string
 #include <exception>
+
+class Form;
 
 class Bureaucrat {
 private:
@@ -25,11 +27,12 @@ public:
 	Bureaucrat(const Bureaucrat& other);
 	Bureaucrat& operator=(const Bureaucrat& other);
 	~Bureaucrat();
-
 	const std::string&	getName() const;
-	int			getGrade() const;
-	void		incrementGrade();
-	void		decrementGrade();
+	int					getGrade() const;
+	void				incrementGrade();
+	void				decrementGrade();
+	void				signForm(Form &form);
+	
 	class	GradeTooHighException : public std::exception {
 	public:
 		virtual const char* what() const throw();
