@@ -6,7 +6,7 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:24:42 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/08 08:27:43 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/08 23:10:39 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main()
 	    std::cout << "⚠️ Generic error: " << e.what() << std::endl;
 	}
 	std::cout << "\n=== FORM SIGNING SCENARIOS ===" << std::endl;
-	Form form1("Normal Grade Form", 25, 50);
+	Form form1("Normal Grade Form", 25, 150);
 	Form formHighGrade("High Grade Form", 1, 1);
 	Form formLowGrade("Low Grade Form", 1, 2);
 	Bureaucrat Ceo("Ceo", 1);
