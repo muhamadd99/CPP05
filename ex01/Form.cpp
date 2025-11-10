@@ -6,7 +6,7 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 07:22:19 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/08 23:15:36 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/10 12:32:28 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,12 @@ Form::Form() : _name("Unnamed"), _isSigned(false),
 
 Form::Form(std::string name, const int toExec, const int toSign) : _name(name), 
 		_isSigned(false), _gradeToExec(toExec), _gradeToSign(toSign)
-{}
+{
+	if (toExec > 150 || toSign > 150)
+		throw Form::GradeTooLowException();
+	if (toExec < 1 || toSign < 1)
+		throw Form::GradeTooHighException();
+}
 
 Form::Form(const Form& other) : _name(other._name), _isSigned(other._isSigned),
 		_gradeToExec(other._gradeToExec), _gradeToSign(other._gradeToSign)

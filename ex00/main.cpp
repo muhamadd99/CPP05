@@ -6,7 +6,7 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:24:42 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/06 17:07:42 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/10 12:23:52 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,6 +152,7 @@ int main()
 	    guy.incrementGrade();
 	    guy.decrementGrade(); 
 	    std::cout << "✅ All operations successful!" << std::endl;
+		//throw std::runtime_error("Out of memory!");
 	}
 	catch (const Bureaucrat::GradeTooHighException& e) {
 	    std::cout << "⬆️ High grade error: " << e.what() << std::endl;
@@ -162,6 +163,5 @@ int main()
 	catch (const std::exception& e) {
 	    std::cout << "⚠️ Generic error: " << e.what() << std::endl;
 	}
-
 	return (0);
 }

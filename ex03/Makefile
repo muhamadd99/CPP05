@@ -1,6 +1,6 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = Bureau
+NAME = Intern
 
 SRC = Bureaucrat.cpp \
 		AForm.cpp \

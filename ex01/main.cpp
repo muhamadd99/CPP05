@@ -6,7 +6,7 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:24:42 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/08 23:10:39 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/10 13:13:20 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,22 @@ int main()
 	{
 	    std::cout << "⬇️ Low grade error: " << e.what() << std::endl;
 	}
-	catch (const std::exception& e)
+	// 🎯 Form possible errors
+	std::cout << "\n=== FORM EXCEPTION HANDLING ===" << std::endl;
+	try
 	{
-	    std::cout << "⚠️ Generic error: " << e.what() << std::endl;
+		Form TooHighToSign("WrongForm", 50, 0);
+		Form TooLowToSign("WrongForm", 50, 151);
+		Form TooLowToExec("WrongForm", 151, 50);
+		Form TooHighToExec("WrongForm", 0, 50);
+	}
+	catch (const Form::GradeTooHighException& e)
+	{
+	    std::cout << "⬆️ High grade error: " << e.what() << std::endl;
+	}
+	catch (const Form::GradeTooLowException& e)
+	{
+	    std::cout << "⬇️ Low grade error: " << e.what() << std::endl;
 	}
 	std::cout << "\n=== FORM SIGNING SCENARIOS ===" << std::endl;
 	Form form1("Normal Grade Form", 25, 150);

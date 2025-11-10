@@ -6,7 +6,7 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:24:42 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/09 16:54:07 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:33:35 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-#include <iostream>
+#include <cstdlib>
 #include <ctime>
 
 int main()
 {
-	std::srand(std::time(0));
+	std::srand(std::time(NULL));
 	
 	std::cout << "\n=== FORM SIGNING SCENARIOS ===" << std::endl;
 	//AForm form1("Normal Grade Form", 25, 50);

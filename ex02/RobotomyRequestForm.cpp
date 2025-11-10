@@ -6,13 +6,13 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 22:37:33 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/09 14:57:37 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:37:48 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 #include "Bureaucrat.hpp"
-#include <cstdlib>
+#include <cstdlib> //std::rand
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string target) :
 	AForm("Robotomy Request Form", 45, 72), _target(target)

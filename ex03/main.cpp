@@ -6,7 +6,7 @@
 /*   By: mbani-ya <mbani-ya@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:24:42 by mbani-ya          #+#    #+#             */
-/*   Updated: 2025/11/09 18:03:32 by mbani-ya         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:11:59 by mbani-ya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 	Bureaucrat Slave("Slave", 150);
 	Intern intern;
 
-	std::cout << "\n=== INTERN TEST ===" << std::endl;
+	std::cout << "=== INTERN TEST ===" << std::endl;
 	AForm* form1 = intern.makeForm("Presidential Pardon Form", "President Form");
 	AForm* form2 = intern.makeForm("Robotomy Request Form", "Robotomy Form");
 	AForm* form3 = intern.makeForm("Shrubbery Creation Form", "Shrubbery Form");
